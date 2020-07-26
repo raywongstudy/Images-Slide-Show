@@ -8,7 +8,7 @@ Recently I join a company for an internship, the user requested that they want t
 
 ## 使用方法 ｜ How to use
 
-相片輪播程式主要用window的cmd command去連結運行PowerShell程式而且可以設定文件夾同每張圖片之間轉換的時間，使用cmd的好處只是我方便加入註冊表開機自動運行程式。
+相片輪播程式主要用window的cmd command去連結運行PowerShell程式而且可以設定文件夾和每張圖片之間轉換的時間，使用cmd的好處只是我方便加入註冊表開機自動運行程式。
 
 The photo slide show program mainly uses the cmd command of the window to link and run the PowerShell program and can set the conversion time between the folder and each picture. The advantage of using cmd is that it is convenient for me to add the registry to start the program automatically.
 
@@ -21,3 +21,19 @@ The main command usage is as follows:
 <code> -wait_time  :Enter the time between show every picture (the number for seconds) </code>
 
 e.g <code> Run-SliderShow -folder "C:\Users\raywongstudy\Desktop\slideshow" -wait_time "10" </code>
+
+資料夾讀取程式主要用window的cmd command去連結運行PowerShell程式而且可以設定源文件夾的路徑，本機的路徑和log文件的路徑，使用cmd的好處只是我方便加入註冊表開機自動運行程式。
+
+The folder reading program mainly uses the cmd command of the window to link to run the PowerShell program and can set the path of the source folder, the path of the local machine, and the path of the log file. The advantage of using cmd is that it is convenient for me to add the registry to automatically run the program.
+
+主要command用法如下：
+
+The main command usage is as follows:
+
+<code>  -source_path  : Enter the source folder path (for upload file and will montor the folder behavior) </code> 
+
+<code>  -location_path  : Enter the location file path (for auto get source path folder)</code> 
+
+<code>  -log_file_path  : Enter the logfile save path (for save the montor folder log file)</code> 
+
+e.g <code> Run-folderMonitor -source_path "C:\Users\raywongstudy\Desktop\Images-Slide-Show\source" -log_file_path "C:\Users\raywongstudy\Desktop\Images-Slide-Show\log" -location_path "C:\Users\raywongstudy\Desktop\Images-Slide-Show\local"</code> 
